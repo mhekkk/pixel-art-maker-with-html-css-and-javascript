@@ -1,0 +1,1336 @@
+/* =========================================
+   KAWAII PIXEL STUDIO
+   Cute Pastel Theme
+========================================= */
+
+
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+:root {
+
+    --pink: #ff7eb6;
+    --hot-pink: #ff5c9d;
+    --light-pink: #ffd9ea;
+
+    --baby-pink: #fff0f7;
+
+    --purple: #b69cff;
+    --lavender: #eee8ff;
+
+    --yellow: #ffe28a;
+
+    --mint: #bdf4df;
+
+    --cream: #fffafc;
+
+    --text: #70465d;
+    --soft-text: #a77b91;
+
+    --border: #f4c5d9;
+
+    --shadow:
+        0 12px 30px rgba(183, 105, 140, 0.15);
+
+    --small-shadow:
+        0 5px 14px rgba(183, 105, 140, 0.13);
+}
+
+
+/* =========================================
+   BODY
+========================================= */
+
+body {
+
+    font-family:
+        "Trebuchet MS",
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    background:
+
+        radial-gradient(
+            circle at 10% 20%,
+            rgba(255, 255, 255, 0.8) 0 40px,
+            transparent 41px
+        ),
+
+        radial-gradient(
+            circle at 90% 80%,
+            rgba(255, 255, 255, 0.7) 0 55px,
+            transparent 56px
+        ),
+
+        linear-gradient(
+            135deg,
+            #fff0f7,
+            #f4efff,
+            #fff7e9
+        );
+
+    color: var(--text);
+
+    min-height: 100vh;
+
+    overflow-x: hidden;
+
+    position: relative;
+}
+
+
+/* =========================================
+   BACKGROUND DOT PATTERN
+========================================= */
+
+body::before {
+
+    content: "";
+
+    position: fixed;
+
+    inset: 0;
+
+    background-image:
+
+        radial-gradient(
+            #f5bfd7 1.5px,
+            transparent 1.5px
+        );
+
+    background-size: 28px 28px;
+
+    opacity: 0.25;
+
+    pointer-events: none;
+
+    z-index: -2;
+}
+
+
+/* =========================================
+   FLOATING STICKERS
+========================================= */
+
+.sticker {
+
+    position: fixed;
+
+    z-index: -1;
+
+    user-select: none;
+
+    pointer-events: none;
+
+    filter:
+        drop-shadow(
+            0 5px 5px rgba(160, 90, 120, 0.12)
+        );
+
+    animation:
+        floatSticker
+        5s
+        ease-in-out
+        infinite;
+}
+
+
+.sticker-1 {
+    top: 14%;
+    left: 2%;
+    font-size: 42px;
+}
+
+.sticker-2 {
+    top: 5%;
+    left: 23%;
+    font-size: 38px;
+    animation-delay: 0.7s;
+}
+
+.sticker-3 {
+    top: 16%;
+    right: 5%;
+    font-size: 36px;
+    animation-delay: 1.2s;
+}
+
+.sticker-4 {
+    bottom: 12%;
+    left: 3%;
+    font-size: 45px;
+    animation-delay: 1.8s;
+}
+
+.sticker-5 {
+    top: 30%;
+    right: 2%;
+    font-size: 40px;
+    animation-delay: 0.5s;
+}
+
+.sticker-6 {
+    bottom: 20%;
+    right: 5%;
+    font-size: 38px;
+    animation-delay: 2s;
+}
+
+.sticker-7 {
+    bottom: 5%;
+    left: 22%;
+    font-size: 40px;
+    animation-delay: 1s;
+}
+
+.sticker-8 {
+    top: 3%;
+    right: 25%;
+    font-size: 35px;
+    animation-delay: 1.5s;
+}
+
+.sticker-9 {
+    bottom: 38%;
+    left: 1%;
+    font-size: 34px;
+    animation-delay: 2.5s;
+}
+
+.sticker-10 {
+    top: 45%;
+    right: 1%;
+    font-size: 32px;
+    animation-delay: 1.2s;
+}
+
+.sticker-11 {
+    bottom: 4%;
+    right: 25%;
+    font-size: 38px;
+    animation-delay: 2.2s;
+}
+
+.sticker-12 {
+    top: 8%;
+    left: 45%;
+    font-size: 28px;
+    animation-delay: 0.9s;
+}
+
+
+@keyframes floatSticker {
+
+    0%,
+    100% {
+        transform:
+            translateY(0)
+            rotate(-4deg);
+    }
+
+    50% {
+        transform:
+            translateY(-12px)
+            rotate(5deg);
+    }
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.top-header {
+
+    width: min(
+        1400px,
+        calc(100% - 40px)
+    );
+
+    margin: 20px auto 15px;
+
+    padding: 20px 28px;
+
+    background:
+        rgba(255, 255, 255, 0.88);
+
+    border:
+        3px solid white;
+
+    border-radius: 28px;
+
+    box-shadow: var(--shadow);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+.top-header::after {
+
+    content: "✦ ･ﾟﾟ･ ✦ ･ﾟﾟ･ ✦";
+
+    position: absolute;
+
+    right: 180px;
+
+    top: 7px;
+
+    color: #f4c0d7;
+
+    font-size: 13px;
+}
+
+
+.logo-area {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 16px;
+}
+
+
+.logo-icon {
+
+    width: 64px;
+
+    height: 64px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffd4e7,
+            #f4dfff
+        );
+
+    border-radius: 22px;
+
+    font-size: 34px;
+
+    box-shadow:
+        inset 0 -5px 0 rgba(210, 130, 170, 0.12),
+        var(--small-shadow);
+
+    transform: rotate(-5deg);
+}
+
+
+.top-header h1 {
+
+    font-size: clamp(
+        25px,
+        4vw,
+        38px
+    );
+
+    color: #8d5270;
+
+    letter-spacing: -1px;
+}
+
+
+.top-header p {
+
+    color: var(--soft-text);
+
+    margin-top: 5px;
+
+    font-size: 14px;
+}
+
+
+.header-badge {
+
+    background: #fff1a9;
+
+    color: #8c6d2e;
+
+    padding: 11px 18px;
+
+    border-radius: 999px;
+
+    font-weight: bold;
+
+    transform: rotate(3deg);
+
+    box-shadow: var(--small-shadow);
+
+    border: 2px solid white;
+}
+
+
+/* =========================================
+   MAIN APP
+========================================= */
+
+.app-container {
+
+    width: min(
+        1400px,
+        calc(100% - 40px)
+    );
+
+    margin: 0 auto 20px;
+
+    display: flex;
+
+    gap: 20px;
+
+    align-items: stretch;
+}
+
+
+/* =========================================
+   SIDEBAR
+========================================= */
+
+.sidebar {
+
+    width: 285px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+
+/* =========================================
+   CUTE CARDS
+========================================= */
+
+.cute-card {
+
+    background:
+        rgba(255, 255, 255, 0.92);
+
+    border:
+        3px solid white;
+
+    border-radius: 24px;
+
+    padding: 18px;
+
+    box-shadow: var(--shadow);
+
+    position: relative;
+}
+
+
+.cute-card::before {
+
+    content: "♡";
+
+    position: absolute;
+
+    top: 9px;
+
+    right: 14px;
+
+    color: #f5bdd4;
+
+    font-size: 16px;
+}
+
+
+.section-title {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-bottom: 14px;
+}
+
+
+.section-title span {
+
+    font-size: 22px;
+}
+
+
+.section-title h2 {
+
+    font-size: 17px;
+
+    color: #815269;
+}
+
+
+/* =========================================
+   TOOL BUTTONS
+========================================= */
+
+.tool-btn {
+
+    width: 100%;
+
+    border: 2px solid #f4d8e4;
+
+    background: #fff9fc;
+
+    color: var(--text);
+
+    border-radius: 17px;
+
+    padding: 10px 12px;
+
+    margin-bottom: 8px;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 11px;
+
+    text-align: left;
+
+    transition:
+        0.2s ease;
+}
+
+
+.tool-btn:hover {
+
+    transform:
+        translateY(-2px)
+        rotate(-1deg);
+
+    border-color: #f4aeca;
+
+    background: #fff0f7;
+
+    box-shadow: var(--small-shadow);
+}
+
+
+.tool-btn.active {
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffacd0,
+            #d8c5ff
+        );
+
+    border-color: white;
+
+    color: white;
+
+    box-shadow:
+        0 5px 15px
+        rgba(210, 120, 165, 0.25);
+
+    transform: scale(1.02);
+}
+
+
+.tool-icon {
+
+    width: 37px;
+
+    height: 37px;
+
+    border-radius: 12px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: white;
+
+    font-size: 20px;
+
+    flex-shrink: 0;
+}
+
+
+.tool-btn strong {
+
+    display: block;
+
+    font-size: 14px;
+}
+
+
+.tool-btn small {
+
+    display: block;
+
+    font-size: 11px;
+
+    opacity: 0.65;
+
+    margin-top: 2px;
+}
+
+
+/* =========================================
+   COLOR PALETTE
+========================================= */
+
+#color-palette {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, 1fr);
+
+    gap: 9px;
+
+    padding: 4px;
+}
+
+
+.color-swatch {
+
+    width: 37px;
+
+    height: 37px;
+
+    border-radius: 13px;
+
+    border: 3px solid white;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 3px 7px
+        rgba(130, 80, 110, 0.15);
+
+    transition:
+        transform 0.18s ease;
+}
+
+
+.color-swatch:hover {
+
+    transform:
+        scale(1.15)
+        rotate(5deg);
+}
+
+
+.color-swatch.active {
+
+    border-color: #8b5a72;
+
+    box-shadow:
+        0 0 0 3px #ffd0e4,
+        0 4px 8px
+        rgba(130, 80, 110, 0.2);
+
+    transform: scale(1.08);
+}
+
+
+/* =========================================
+   CUSTOM COLOR
+========================================= */
+
+.custom-color-box {
+
+    margin-top: 15px;
+
+    background: #fff3f8;
+
+    border-radius: 16px;
+
+    padding: 10px 12px;
+
+    border: 2px dashed #f3c3d7;
+}
+
+
+.custom-color-box label {
+
+    display: block;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    color: #98637b;
+
+    margin-bottom: 6px;
+}
+
+
+#custom-color {
+
+    width: 100%;
+
+    height: 38px;
+
+    border: 3px solid white;
+
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    background: transparent;
+
+    padding: 0;
+
+}
+
+
+/* =========================================
+   GRID SELECT
+========================================= */
+
+#grid-size {
+
+    width: 100%;
+
+    padding: 12px 14px;
+
+    border:
+        2px solid #f0ccdc;
+
+    border-radius: 15px;
+
+    background: #fff7fb;
+
+    color: #795067;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    outline: none;
+
+    cursor: pointer;
+}
+
+
+#grid-size:focus {
+
+    border-color: #ff9fc7;
+
+    box-shadow:
+        0 0 0 4px #ffe2ee;
+}
+
+
+.tiny-note {
+
+    color: #b58b9f;
+
+    font-size: 10px;
+
+    text-align: center;
+
+    margin-top: 8px;
+}
+
+
+/* =========================================
+   DOWNLOAD BUTTON
+========================================= */
+
+.download-btn {
+
+    width: 100%;
+
+    border: 3px solid white;
+
+    border-radius: 19px;
+
+    padding: 15px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff82b8,
+            #b89cff
+        );
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 18px
+        rgba(192, 112, 158, 0.22);
+
+    transition:
+        0.2s ease;
+}
+
+
+.download-btn:hover {
+
+    transform:
+        translateY(-3px)
+        rotate(-1deg);
+
+    box-shadow:
+        0 12px 22px
+        rgba(192, 112, 158, 0.28);
+}
+
+
+.download-btn:active {
+
+    transform:
+        translateY(1px);
+}
+
+
+.made-with {
+
+    text-align: center;
+
+    color: #bd8fa5;
+
+    font-size: 11px;
+}
+
+
+/* =========================================
+   WORKSPACE
+========================================= */
+
+.workspace {
+
+    flex: 1;
+
+    min-width: 0;
+
+    background:
+        rgba(255, 255, 255, 0.75);
+
+    border:
+        3px solid white;
+
+    border-radius: 30px;
+
+    padding: 22px;
+
+    box-shadow: var(--shadow);
+
+    min-height: 680px;
+
+    position: relative;
+}
+
+
+/* =========================================
+   WORKSPACE HEADER
+========================================= */
+
+.workspace-top {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 18px;
+
+    padding: 0 5px;
+}
+
+
+.mini-label {
+
+    font-size: 10px;
+
+    font-weight: bold;
+
+    color: #c28ca5;
+
+    letter-spacing: 1.5px;
+}
+
+
+.workspace-top h2 {
+
+    color: #83546d;
+
+    font-size: 22px;
+
+    margin-top: 3px;
+}
+
+
+.sparkle-badge {
+
+    background: #fff3b7;
+
+    color: #94762c;
+
+    border: 2px solid white;
+
+    border-radius: 999px;
+
+    padding: 9px 15px;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    transform: rotate(2deg);
+
+    box-shadow: var(--small-shadow);
+}
+
+
+/* =========================================
+   CANVAS FRAME
+========================================= */
+
+.canvas-frame {
+
+    min-height: 530px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    position: relative;
+
+    background:
+
+        radial-gradient(
+            circle,
+            rgba(255, 190, 218, 0.3) 1px,
+            transparent 1px
+        );
+
+    background-size: 18px 18px;
+
+    border-radius: 25px;
+
+    padding: 30px;
+}
+
+
+/* =========================================
+   CANVAS INNER
+========================================= */
+
+.canvas-inner {
+
+    background: white;
+
+    padding: 14px;
+
+    border-radius: 18px;
+
+    border: 4px solid #ffd1e3;
+
+    box-shadow:
+
+        0 10px 0 #f2b8d1,
+
+        0 18px 30px
+        rgba(150, 90, 120, 0.17);
+
+    transform: rotate(-1deg);
+
+    transition:
+        transform 0.25s ease;
+}
+
+
+.canvas-inner:hover {
+
+    transform:
+        rotate(0deg)
+        scale(1.01);
+}
+
+
+/* =========================================
+   CANVAS
+========================================= */
+
+canvas {
+
+    display: block;
+
+    background: white;
+
+    cursor: crosshair;
+
+    image-rendering: pixelated;
+
+    border-radius: 5px;
+}
+
+
+/* =========================================
+   CORNER DECORATIONS
+========================================= */
+
+.corner-decoration {
+
+    position: absolute;
+
+    font-size: 31px;
+
+    z-index: 2;
+
+    filter:
+        drop-shadow(
+            0 4px 4px
+            rgba(130, 70, 100, 0.13)
+        );
+
+    animation:
+        tinyFloat
+        3.5s
+        ease-in-out
+        infinite;
+}
+
+
+.top-left {
+
+    top: 18px;
+
+    left: 20px;
+
+    transform: rotate(-15deg);
+}
+
+
+.top-right {
+
+    top: 18px;
+
+    right: 20px;
+
+    transform: rotate(15deg);
+
+    animation-delay: 0.5s;
+}
+
+
+.bottom-left {
+
+    bottom: 18px;
+
+    left: 20px;
+
+    transform: rotate(10deg);
+
+    animation-delay: 1s;
+}
+
+
+.bottom-right {
+
+    bottom: 18px;
+
+    right: 20px;
+
+    transform: rotate(-10deg);
+
+    animation-delay: 1.5s;
+}
+
+
+@keyframes tinyFloat {
+
+    0%,
+    100% {
+        transform:
+            translateY(0)
+            rotate(-5deg);
+    }
+
+    50% {
+        transform:
+            translateY(-6px)
+            rotate(5deg);
+    }
+}
+
+
+/* =========================================
+   CANVAS TIP
+========================================= */
+
+.canvas-tip {
+
+    margin-top: 8px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    background: #fff5fa;
+
+    border:
+        2px dashed #f2c5d9;
+
+    border-radius: 17px;
+
+    padding: 11px;
+
+    color: #a5768d;
+
+    font-size: 12px;
+
+    text-align: center;
+}
+
+
+.canvas-tip span {
+
+    font-size: 17px;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+
+    text-align: center;
+
+    color: #b18499;
+
+    font-size: 11px;
+
+    padding: 5px 20px 18px;
+
+    letter-spacing: 0.4px;
+}
+
+
+footer span {
+
+    color: #ed9cbd;
+
+    margin: 0 5px;
+}
+
+
+/* =========================================
+   SCROLLBAR
+========================================= */
+
+::-webkit-scrollbar {
+
+    width: 10px;
+
+    height: 10px;
+}
+
+
+::-webkit-scrollbar-track {
+
+    background: #fff0f7;
+
+    border-radius: 10px;
+}
+
+
+::-webkit-scrollbar-thumb {
+
+    background: #f4b5d0;
+
+    border-radius: 10px;
+
+    border: 2px solid #fff0f7;
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+
+    background: #e995b8;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .app-container {
+
+        flex-direction: column;
+    }
+
+
+    .sidebar {
+
+        width: 100%;
+
+        display: grid;
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .download-btn {
+
+        grid-column: 1 / -1;
+    }
+
+
+    .made-with {
+
+        grid-column: 1 / -1;
+    }
+
+
+    .workspace {
+
+        min-height: auto;
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    .top-header {
+
+        width: calc(100% - 20px);
+
+        padding: 16px;
+
+        border-radius: 22px;
+    }
+
+
+    .header-badge {
+
+        display: none;
+    }
+
+
+    .top-header h1 {
+
+        font-size: 24px;
+    }
+
+
+    .logo-icon {
+
+        width: 50px;
+
+        height: 50px;
+
+        font-size: 27px;
+    }
+
+
+    .app-container {
+
+        width: calc(100% - 20px);
+    }
+
+
+    .sidebar {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .workspace {
+
+        padding: 12px;
+
+        border-radius: 22px;
+    }
+
+
+    .workspace-top {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 10px;
+    }
+
+
+    .canvas-frame {
+
+        padding: 10px;
+
+        min-height: 400px;
+    }
+
+
+    .canvas-inner {
+
+        padding: 8px;
+
+        max-width: 100%;
+
+        overflow: auto;
+    }
+
+
+    canvas {
+
+        max-width: 100%;
+
+        height: auto;
+    }
+
+
+    .corner-decoration {
+
+        font-size: 22px;
+    }
+
+
+    .sticker {
+
+        opacity: 0.55;
+    }
+}

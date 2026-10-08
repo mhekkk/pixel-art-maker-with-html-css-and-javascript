@@ -1,0 +1,152 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #1e1e1e;
+    color: white;
+    min-height: 100vh;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background: #252526;
+    border-bottom: 1px solid #444;
+}
+
+header h1 {
+    margin-bottom: 8px;
+}
+
+header p {
+    color: #aaa;
+}
+
+main {
+    display: flex;
+    min-height: calc(100vh - 100px);
+}
+
+.sidebar {
+    width: 240px;
+    padding: 20px;
+    background: #252526;
+    border-right: 1px solid #444;
+}
+
+.sidebar h2 {
+    margin: 20px 0 10px;
+    font-size: 18px;
+}
+
+.sidebar h2:first-child {
+    margin-top: 0;
+}
+
+.tool-btn,
+#export-btn {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 8px;
+    border: none;
+    border-radius: 6px;
+    background: #333;
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.tool-btn:hover,
+#export-btn:hover {
+    background: #444;
+}
+
+.tool-btn.active {
+    background: #007acc;
+}
+
+#color-palette {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 8px;
+}
+
+.color-swatch {
+    width: 30px;
+    height: 30px;
+    border-radius: 4px;
+    border: 2px solid transparent;
+    cursor: pointer;
+}
+
+.color-swatch:hover {
+    transform: scale(1.1);
+}
+
+.color-swatch.active {
+    border-color: white;
+    box-shadow: 0 0 0 2px #007acc;
+}
+
+#custom-color {
+    width: 100%;
+    height: 40px;
+    margin-top: 8px;
+    border: none;
+    cursor: pointer;
+}
+
+#grid-size {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #555;
+    background: #333;
+    color: white;
+    cursor: pointer;
+}
+
+#export-btn {
+    margin-top: 20px;
+    background: #28a745;
+}
+
+#export-btn:hover {
+    background: #218838;
+}
+
+.canvas-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    overflow: auto;
+}
+
+canvas {
+    background: white;
+    border: 2px solid #555;
+    cursor: crosshair;
+    image-rendering: pixelated;
+}
+
+@media (max-width: 700px) {
+    main {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #444;
+    }
+
+    .canvas-container {
+        padding: 15px;
+    }
+}

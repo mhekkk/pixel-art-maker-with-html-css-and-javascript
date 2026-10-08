@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>✨ Kawaii Pixel Studio ✨</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+    <div class="sticker sticker-1">🌸</div>
+    <div class="sticker sticker-2">🎀</div>
+    <div class="sticker sticker-3">⭐</div>
+    <div class="sticker sticker-4">🍓</div>
+    <div class="sticker sticker-5">☁️</div>
+    <div class="sticker sticker-6">💗</div>
+    <div class="sticker sticker-7">🧸</div>
+    <div class="sticker sticker-8">🍰</div>
+    <div class="sticker sticker-9">🌷</div>
+    <div class="sticker sticker-10">✨</div>
+    <div class="sticker sticker-11">🐰</div>
+    <div class="sticker sticker-12">💫</div>
+
+
+
+    <header class="top-header">
+
+        <div class="logo-area">
+
+            <div class="logo-icon">
+                🎀
+            </div>
+
+            <div>
+                <h1>Kawaii Pixel Studio</h1>
+
+                <p>
+                    ✨ create something tiny & magical ✨
+                </p>
+            </div>
+
+        </div>
+
+        <div class="header-badge">
+            ♡ pixel artist ♡
+        </div>
+
+    </header>
+
+
+
+
+    <main class="app-container">
+
+
+
+        <aside class="sidebar">
+
+
+            <!-- Tools Card -->
+
+            <section class="cute-card">
+
+                <div class="section-title">
+                    <span>🧸</span>
+                    <h2>My Tools</h2>
+                </div>
+
+
+                <button
+                    class="tool-btn active"
+                    data-tool="pen"
+                >
+                    <span class="tool-icon">✏️</span>
+
+                    <span>
+                        <strong>Pen</strong>
+                        <small>draw pixels</small>
+                    </span>
+                </button>
+
+
+                <button
+                    class="tool-btn"
+                    data-tool="eraser"
+                >
+                    <span class="tool-icon">🧹</span>
+
+                    <span>
+                        <strong>Eraser</strong>
+                        <small>clean pixels</small>
+                    </span>
+                </button>
+
+
+                <button
+                    class="tool-btn"
+                    data-tool="fill"
+                >
+                    <span class="tool-icon">🪣</span>
+
+                    <span>
+                        <strong>Fill</strong>
+                        <small>fill an area</small>
+                    </span>
+                </button>
+
+            </section>
+
+
+
+            <!-- Colors Card -->
+
+            <section class="cute-card">
+
+                <div class="section-title">
+                    <span>🌈</span>
+                    <h2>Color Candy</h2>
+                </div>
+
+
+                <div id="color-palette"></div>
+
+
+                <div class="custom-color-box">
+
+                    <label for="custom-color">
+                        🎨 Custom color
+                    </label>
+
+                    <input
+                        type="color"
+                        id="custom-color"
+                        value="#ff7eb6"
+                    >
+
+                </div>
+
+            </section>
+
+
+
+            <!-- Grid Card -->
+
+            <section class="cute-card">
+
+                <div class="section-title">
+                    <span>🧩</span>
+                    <h2>Canvas Size</h2>
+                </div>
+
+
+                <select id="grid-size">
+
+                    <option value="16" selected>
+                        🌸 16 × 16
+                    </option>
+
+                    <option value="32">
+                        🌷 32 × 32
+                    </option>
+
+                    <option value="64">
+                        🌺 64 × 64
+                    </option>
+
+                </select>
+
+
+                <p class="tiny-note">
+                    💡 Changing size clears your artwork
+                </p>
+
+            </section>
+
+
+
+            <!-- Download -->
+
+            <button
+                id="export-btn"
+                class="download-btn"
+            >
+
+                <span>💾</span>
+
+                Download My Art
+
+                <span>✨</span>
+
+            </button>
+
+
+            <div class="made-with">
+                made with ♡ & pixels
+            </div>
+
+        </aside>
+
+
+
+       
+
+        <section class="workspace">
+
+
+            <div class="workspace-top">
+
+                <div>
+
+                    <span class="mini-label">
+                        ✨ YOUR LITTLE CANVAS
+                    </span>
+
+                    <h2>
+                        Let's make some magic! 💗
+                    </h2>
+
+                </div>
+
+
+                <div class="sparkle-badge">
+                    ⭐ ART TIME ⭐
+                </div>
+
+            </div>
+
+
+
+            <!-- Canvas frame -->
+
+            <div class="canvas-frame">
+
+                <div class="corner-decoration top-left">
+                    🌸
+                </div>
+
+                <div class="corner-decoration top-right">
+                    🎀
+                </div>
+
+                <div class="corner-decoration bottom-left">
+                    🍓
+                </div>
+
+                <div class="corner-decoration bottom-right">
+                    🧸
+                </div>
+
+
+                <div class="canvas-inner">
+
+                    <canvas id="canvas"></canvas>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Bottom tip -->
+
+            <div class="canvas-tip">
+
+                <span>💡</span>
+
+                <p>
+                    Pick a color, choose a tool and start
+                    creating your tiny masterpiece!
+                </p>
+
+                <span>💗</span>
+
+            </div>
+
+
+        </section>
+
+    </main>
+
+
+
+    
+
+    <footer>
+
+        <span>🌸</span>
+
+        Kawaii Pixel Studio
+
+        <span>♡</span>
+
+        made for tiny artists
+
+        <span>🌸</span>
+
+    </footer>
+
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

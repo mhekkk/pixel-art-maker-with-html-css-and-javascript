@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pixel Art Maker</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>🎨 Pixel Art Maker</h1>
+        <p>Create your own pixel art!</p>
+    </header>
+
+    <main>
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+
+            <h2>Tools</h2>
+
+            <button class="tool-btn active" data-tool="pen">
+                ✏️ Pen
+            </button>
+
+            <button class="tool-btn" data-tool="eraser">
+                🧹 Eraser
+            </button>
+
+            <button class="tool-btn" data-tool="fill">
+                🪣 Fill
+            </button>
+
+            <h2>Colors</h2>
+
+            <div id="color-palette"></div>
+
+            <label for="custom-color">Custom Color</label>
+
+            <input
+                type="color"
+                id="custom-color"
+                value="#ff0000"
+            >
+
+            <h2>Grid Size</h2>
+
+            <select id="grid-size">
+                <option value="16" selected>16 × 16</option>
+                <option value="32">32 × 32</option>
+                <option value="64">64 × 64</option>
+            </select>
+
+            <button id="export-btn">
+                Download PNG
+            </button>
+
+        </aside>
+
+        <!-- Canvas Area -->
+        <section class="canvas-container">
+
+            <canvas id="canvas"></canvas>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
